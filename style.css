@@ -250,4 +250,8 @@ html, body {
       flex-direction: column;
       gap: 40px;
     }
+
+    .cardlayoutone, .cardlayouttwo {
+      grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
   }
