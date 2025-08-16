@@ -6,11 +6,11 @@
     box-sizing: border-box;
 }
 html, body {
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
     width: 100%;
-   
+   /* overflow-x: hidden; */
   }
  
  body {
@@ -48,7 +48,8 @@ html, body {
     padding: 72px 56px;
     color: white;
   
-    width: 1280px;
+    width: 100%; 
+    max-width: 1280px;
     height: 236px;
     max-width: 1280px;
     border-radius: 32px;
@@ -68,7 +69,7 @@ html, body {
 
 .herolayout {
     display: flex;
-    margin: 60px 80px 0 90px;
+    padding: 60px 40px 0 40px;
 }
 
 .bgtxt {
@@ -94,6 +95,7 @@ html, body {
 .sideleft {
     display: flex;
     flex-direction: column;
+   
 }
 .btnlay {
     display: flex;
@@ -149,8 +151,6 @@ html, body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-left: 60px;
-    margin-right: 10px;
 }
 .imgvect {
     margin-top: -27px;
@@ -193,70 +193,57 @@ html, body {
 .sideright {
     display: flex;
     gap: 21.43px;
+    /* padding-right: 80px; */
 
 }
 
 .img2left {
-    margin-left: 130px;
+    padding-left: 130px;
 }
 
+/* FLEX SECTION */
 .flexlayout {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
-    margin-top: 60px;
-    padding-left: 90px;
-    padding-right: 90px;
-}
-
-.cardlayoutone { 
+    margin: 60px auto 0 auto;
+    padding: 20px;
+    max-width: 1280px;
+    width: 100%;
+  }
+  
+  /* CARDS */
+  .cardlayoutone, .cardlayouttwo {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;  
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
     margin-top: 38px;
     margin-bottom: 12px;
-}
-.cardlayouttwo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px; 
-}
-
-.cardone {
-    background-color: #F3F2F8;
-    padding: 24px;
-    border-radius: 24px;
-    border: 0.5px;
-   
-}
-.cardtwo  {
-  background-color: #FEEAD2;
-  padding:24px ; 
-  border-radius:20px ;
-  border:0.5px;
-
-}
-.cardthree  {
-    background-color:#FEFAE7 ;
+  }
+  
+  .cardone, .cardtwo, .cardthree, .cardfour {
     padding: 24px;
     border-radius: 20px;
-    border: 0.5px;
+    border: 0.5px solid transparent;
+  }
   
-}
-.cardfour  {
-   background-color:#FEE7EF ;
-    padding: 24px;
-    border-radius: 24px;
-    border: 0.5px;   
-}
-
-@media (max-width: 900px) {
-    .cardlayoutone {
-        grid-template-columns: 1fr;
+  .cardone { background-color: #F3F2F8; }
+  .cardtwo { background-color: #FEEAD2; }
+  .cardthree { background-color: #FEFAE7; }
+  .cardfour { background-color: #FEE7EF; }
+  
+  /* MEDIA QUERIES */
+  @media (max-width: 900px) {
+    .mission {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
     }
-    .cardlayouttwo {
-        grid-template-columns: 1fr;
+  
+    .herolayout {
+      flex-direction: column;
+      gap: 40px;
     }
-}
+  }
