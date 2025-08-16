@@ -61,13 +61,14 @@ html, body {
   width: 196px;
   height: 48px;
   padding: 12px 24px;
+  margin-top: -10px;
   border-radius: 15px;
 }
 
 
 .herolayout {
     display: flex;
-    margin: 60px 80px 0 80px;
+    margin: 60px 80px 0 90px;
 }
 
 .bgtxt {
@@ -123,12 +124,24 @@ html, body {
 }
 
 .btnlearn {
-    width: 148px;
-    height: 24px;
     background-color: #fff;
     color: black;
-    border: 1px solid black;
-    padding: 12px 24px;
+
+    border: 1px solid var(--Color-Neutral-Darkest, rgba(0, 0, 0, 1));
+    width: 135px;
+    height: 48px;
+
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    border-radius: 12px;
+    border-width: 1px;
+
+    font-weight: 500;
+    font-style: Medium;
+    font-size: medium;
+    line-height: 150%;
 }
 
 .containerone {
@@ -136,6 +149,45 @@ html, body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    margin-left: 60px;
+    margin-right: 10px;
+}
+.imgvect {
+    margin-top: -27px;
+    margin-left: -26px;
+}
+
+.trusttxt {
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: medium;
+    line-height: 140%;
+    letter-spacing: -1%;
+}
+.number {
+    color: rgba(112, 79, 230, 1);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 64px;
+
+    line-height: 100%;
+    letter-spacing: -7%;
+    text-align: center;
+
+}
+.active {
+    color: rgba(9, 9, 9, 1);
+    font-weight: 500;
+    /* font-style: Medium; */
+    /* font-size: medium; */
+    line-height: 140%;
+    letter-spacing: -1%;
+}
+
+.pictext {
+ display: flex;
+ margin-top: 7px;
+ margin-bottom: 7px;
 }
 
 .sideright {
