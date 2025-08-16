@@ -244,6 +244,7 @@ html, body {
       align-items: center;
       text-align: center;
       padding: 40px 20px;
+      height: auto;
     }
   
     .herolayout {
